@@ -1,0 +1,27 @@
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    padding: 5px 20px;
+    font-family: "Roboto", sans-serif;
+    border-radius: 10px;
+    box-shadow: 13px;
+    background-color: rgb(249, 248, 247);
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+}
+
+.thought {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+    font-weight: 2px;
+    font-size: small;
+}
+
