@@ -4,8 +4,12 @@
   "description": "A Web App for cleanliness",
   "main": "index.js",
   "scripts": {
+    "start": "concurrently \"nodemon backend/src/index.js\" \"npm --prefix frontend/Garbage-man-frontend run dev\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^9.1.2"
+  }
 }

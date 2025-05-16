@@ -10,7 +10,7 @@ import {
 import { auth } from "../services/auth.js";
 
 const userAuthContext = createContext();
-
+ 
 export function UserAuthContextProvider({ children }) {
   const [user, setUser] = useState({});
 
