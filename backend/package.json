@@ -9,6 +9,7 @@
   "author": "Ujjawal Gusain",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^6.0.0",
     "mongoose": "^8.14.3"
   }
 }
