@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const getSignedUp = async (userData, signUp) => { 
-  const { name, email, uid, userCredential, phoneNumber, location } = userData;
+  const { name, email, uid, userCredential, phoneNumber, location, address } = userData;
 
   try {
     // console.log(`Location2: ${location}`);
@@ -18,7 +18,7 @@ const getSignedUp = async (userData, signUp) => {
           type: "Point",
           coordinates: [location.longitude, location.latitude]
         },
-        address: "Unknown"  
+        address: address ? address : "Unknown"  
         },
       idToken
     });

@@ -4,6 +4,7 @@ import Homepage from './pages/CommonPages/Homepage';
 import Settings from './pages/CommonPages/Settings';
 import IssuePage from './pages/AdminPages/IssuePage';
 import Signup from './pages/CommonPages/Signup';
+import Login from './pages/CommonPages/Login';
 function App() {
 
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/settings" element={<Settings />} />
         <Route path="/issues" element={<IssuePage />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
     </BrowserRouter>
   )

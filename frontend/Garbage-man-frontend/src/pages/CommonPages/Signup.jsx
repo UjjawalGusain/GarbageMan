@@ -7,7 +7,7 @@ const Signup = () => {
   const { signUp } = useUserAuth();
 
   const onSubmit = async (data) => {
-    const { email, password, name, phoneNumber } = data;
+    const { email, password, name, phoneNumber, address } = data;
 
     if (!navigator.geolocation) {
       console.error("Geolocation is not supported by your browser");
@@ -24,7 +24,7 @@ const Signup = () => {
     	  const userCredential = await signUp(email, password);
     	  const uid = userCredential.user.uid;
 
-    	  await getSignedUp({ name, email, uid, userCredential, phoneNumber, location });
+    	  await getSignedUp({ name, email, uid, userCredential, phoneNumber, location, address });
 
     	} catch (error) {
     	  console.error("Signup error:", error.message);
@@ -56,10 +56,16 @@ const Signup = () => {
         {errors.password && <p>{errors.password.message}</p>}
       </div>
 
-	  <div>
+	    <div>
         <label>Phone Number: </label>
         <input {...register("phoneNumber", { required: "Phone Number is required" })} type="text" />
         {errors.phoneNumber && <p>{errors.phoneNumber.message}</p>}
+      </div>
+
+      <div>
+        <label>City, State: </label>
+        <input {...register("address")} type="text" />
+        {errors.address && <p>{errors.address.message}</p>}
       </div>
 
       <button type="submit">Sign Up</button>
